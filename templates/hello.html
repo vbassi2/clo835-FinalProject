@@ -1,0 +1,34 @@
+<!doctype html>
+<title>Hello from Flask</title>
+<body style="background: {{ color }};"></body>
+<div style="color: #e4e4e4;
+    text-align:  center;
+    height: 90px;
+    vertical-align:  middle;">
+
+  {% if db_connect_result %}
+    <img src="{{ appurl1 }}">
+      <h3> {{ clo835Group }} has successfully connected to MYSQL Database. </h3>
+         <h3>img url - {{ appurl1 }}</h3>
+  {% else %}
+    <img src="{{ appurl2 }}">
+      <h3> {{ clo835Group }} has Failed connecting to the MySQL database. </h3>
+         <h3>img url - {{ appurl2 }}</h3>
+    
+  {% endif %}
+
+  {% if debug %}
+    <h2> {{ debug }} </h2>
+  {% endif %}
+
+  {% if name %}
+    <p> From {{ name }}!</p>
+  {% endif %}
+
+  {% if contents %}
+  <textarea rows="10" cols="50">
+    {{ contents }}
+  </textarea>
+  {% endif %}
+
+</div>
